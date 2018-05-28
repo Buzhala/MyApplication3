@@ -4,17 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/greenn">
+   >
 
 
   <TextView
+      android:id="@+id/Test"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
+      android:layout_height="100dp"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:fontFamily="monospace"
+      android:paddingTop="30dp"
       android:text="Miresevini ne testin e Matures"
-      android:layout_centerHorizontal="true"
+      android:textAlignment="center"
+      android:textColor="black"
+      android:textSize="25dp"
+      android:textStyle="bold" />
+<TextView
+    android:id="@+id/Drejtimi"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Ju lutem zgjidhni drejtimin!"
+    android:layout_below="@+id/Test"
+    android:textSize="15dp"
+    />
 
-  />
-
+  <Spinner
+      android:id="@+id/spinner1"
+      android:layout_width="155dp"
+      android:layout_height="38dp"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentLeft="true"
+      android:layout_marginTop="130dp"
+      />
 
 
 </RelativeLayout>
