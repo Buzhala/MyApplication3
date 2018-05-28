@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.Kyqu:
 
-
+                startActivity(new Intent(this, kyqu.class));
                 break;
 
             case R.id.Regjistrohu:
