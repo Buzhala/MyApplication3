@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 public class kyqu extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    String[] drejtimi = { "Shkenca natyrore", "Shkenca shoqerore", "Mjeksia", "Shkolla teknike" };
+    String[] Drejtimi = { "Shkenca natyrore", "Shkenca shoqerore", "Mjeksia", "Shkolla teknike" };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +21,7 @@ public class kyqu extends AppCompatActivity implements AdapterView.OnItemSelecte
         spin.setOnItemSelectedListener(this);
 
         //Creating the ArrayAdapter instance having the country list
-        ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,drejtimi);
+        ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,Drejtimi);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //Setting the ArrayAdapter data on the Spinner
         spin.setAdapter(aa);
@@ -31,7 +31,7 @@ public class kyqu extends AppCompatActivity implements AdapterView.OnItemSelecte
     //Performing action onItemSelected and onNothing selected
     @Override
     public void onItemSelected(AdapterView<?> arg0, View arg1, int position,long id) {
-        Toast.makeText(getApplicationContext(),drejtimi[position] ,Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),Drejtimi[position] ,Toast.LENGTH_LONG).show();
     }
 
     @Override
