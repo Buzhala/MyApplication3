@@ -1,5 +1,6 @@
 package com.example.ardita.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.app.Activity;
@@ -12,11 +13,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.view.View.OnClickListener;
 import android.widget.*;
-public class kyqu extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class kyqu extends AppCompatActivity implements AdapterView.OnItemSelectedListener, OnClickListener {
 
     String[] Drejtimi = { "Shkenca natyrore", "Shkenca shoqerore", "Mjeksia", "Shkolla teknike" };
     CheckBox matematike,fizike,biologji,gjuheshqipe,gjuheangleze,kimi;
     Button vazhdo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +26,7 @@ public class kyqu extends AppCompatActivity implements AdapterView.OnItemSelecte
         Spinner spin = (Spinner) findViewById(R.id.Spinner);
         spin.setOnItemSelectedListener(this);
         addListenerOnButtonClick();
+        vazhdo.setOnClickListener(this);
 
         //Creating the ArrayAdapter instance having the country list
         ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,Drejtimi);
@@ -40,6 +43,7 @@ public class kyqu extends AppCompatActivity implements AdapterView.OnItemSelecte
         gjuheangleze=(CheckBox)findViewById(R.id.lenda5);
         kimi=(CheckBox)findViewById(R.id.lenda6);
         vazhdo=(Button)findViewById(R.id.vazhdo);
+
     }
 
 
@@ -65,5 +69,15 @@ public class kyqu extends AppCompatActivity implements AdapterView.OnItemSelecte
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.vazhdo:
+
+                startActivity(new Intent(this, info.class));
+                break;
+        }
     }
 }

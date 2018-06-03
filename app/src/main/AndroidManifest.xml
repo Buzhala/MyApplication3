@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".kyqu" />
-        <activity android:name=".Regjistrohu"></activity>
+        <activity android:name=".Regjistrohu" />
+        <activity android:name=".info" />
+        <activity android:name=".Test"></activity>
     </application>
 
 </manifest>

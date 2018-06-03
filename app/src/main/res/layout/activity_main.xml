@@ -8,22 +8,32 @@
     android:background="@drawable/background"
     tools:context="com.example.ardita.myapplication.MainActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#028F1F"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+
+        />
+
     <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="150dp"
-            android:layout_marginStart="150dp"
-            android:contentDescription="@string/app_name"
-            app:srcCompat="@drawable/images" />
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="79dp"
+        android:contentDescription="@string/app_name"
+        app:srcCompat="@drawable/images" />
 
     <EditText
         android:id="@+id/perdoruesi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_above="@+id/Fjalkalimi"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
+        android:layout_marginBottom="-218dp"
         android:drawableLeft="@drawable/ic_action_perdoruesi"
         android:ems="10"
         android:hint="@string/Perdoruesi"
@@ -36,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="146dp"
+        android:layout_marginTop="218dp"
         android:drawableLeft="@drawable/ic_action_fjalkalimi"
         android:ems="10"
         android:hint="@string/Fjalekalimi"
@@ -47,9 +57,9 @@
         android:id="@+id/Kyqu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="206dp"
+        android:layout_marginBottom="238dp"
         android:hint="@string/Kyqu"
         android:text="@string/Kyqu" />
 
@@ -59,10 +69,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="218dp"
-        android:textAlignment="center"
+        android:layout_marginBottom="157dp"
         android:hint="@string/Regjistrimi"
-        android:text="@string/Regjistrimi" />
+        android:text="@string/Regjistrimi"
+        android:textAlignment="center" />
 
 </RelativeLayout>
 

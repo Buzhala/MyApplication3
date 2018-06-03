@@ -3,6 +3,7 @@ package com.example.ardita.myapplication;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button Kyqu;
     EditText perdoruesi, Fjalkalimi;
     TextView Regjistrohu;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Fjalkalimi = (EditText) findViewById(R.id.Fjalkalimi);
         Kyqu = (Button) findViewById(R.id.Kyqu);
         Regjistrohu = (TextView) findViewById(R.id.Regjistrohu);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Test Mature");
+        setSupportActionBar(toolbar);
         Kyqu.setOnClickListener(this);
         Regjistrohu.setOnClickListener(this);
 
